@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Alkatra:regular,500,600,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins';
+    @apply dark:bg-black;
+  }
+}
+
+@layer components {
+  .bg-full {
+    @apply bg-center bg-cover bg-no-repeat;
+  }
+
+  .bg-dark {
+    @apply dark:bg-[#121212];
+  }
+
+  .flex-full {
+    @apply flex items-center justify-center
+  }
+
+  .hover-link:after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 0%;
+    height: 2px;
+    transition: all .3s ease-in-out;
+    margin: auto;
+  }
+
+  .hover-link:hover:after {
+    width: 100%;
+  }
+
+
+  .mobile {
+    @apply max-md:absolute max-md:top-0 max-md:flex-col max-md:w-[300px] max-md:h-screen max-md:items-center max-md:pt-16 max-md:gap-y-5 max-md:bg-white max-md:shadow-lg max-md:shadow-black/30;
+  }
+
+}
