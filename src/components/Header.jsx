@@ -6,7 +6,7 @@ import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 const Header = () => {
   const [click, setClick] = useState(false);
 
-  const [theme, setTheme] = useState(localStorage.theme);
+  const [theme, setTheme] = useState(localStorage.theme || 'light');
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
