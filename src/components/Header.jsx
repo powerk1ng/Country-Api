@@ -50,7 +50,7 @@ const Header = () => {
           <span className="font-bold text-2xl font-alkatra">
             Country finder
           </span>
-          <span className="font-mono text-[15px]">By Gündüz Məmmədli</span>
+          <span className="font-mono text-[15px]">By Gündüz Mammadli</span>
         </Link>
 
         {/* navigation */}

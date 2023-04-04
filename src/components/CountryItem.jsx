@@ -12,7 +12,7 @@ const CountryItem = ({
   return (
     <Link to={`/country/${name.common}`} className="bg-white border-2 shadow-lg shadow-black/30 rounded-lg hover:-translate-y-2.5 transition-transform duration-500 dark:shadow-white/50">
       {/* card-top img */}
-      <div className="sm:h-[200px] max-[640px]:h-[280px]">
+      <div className="sm:h-[200px] max-[450px]:h-auto max-[640px]:h-[280px]">
         <img
           className="h-full object-cover w-full rounded-t-lg"
           src={flags?.png}

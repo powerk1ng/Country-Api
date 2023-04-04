@@ -22,10 +22,6 @@ const filters = [{
         label: "Oceania",
         key: "6",
     },
-    {
-        label: "Polar",
-        key: "7",
-    },
 ];
 
 export default filters;
