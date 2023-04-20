@@ -22,6 +22,7 @@ const filters = [{
         label: "Oceania",
         key: "6",
     },
+    
 ];
 
 export default filters;
