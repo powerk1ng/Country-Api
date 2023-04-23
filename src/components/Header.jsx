@@ -6,7 +6,7 @@ import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 const Header = () => {
   const [click, setClick] = useState(false);
 
-  const [theme, setTheme] = useState(localStorage.theme || 'light');
+  const [theme, setTheme] = useState(localStorage.theme || "light");
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
@@ -24,16 +24,16 @@ const Header = () => {
     setClick(!click);
   };
 
+  const handleClickOutside = (e) => {
+    if (!e.target.closest("#menu-btn") && !e.target.closest("#nav-menu")) {
+      menuOpen();
+    }
+  };
+
   useEffect(() => {
     if (!click) {
       return;
     }
-
-    const handleClickOutside = (e) => {
-      if (!e.target.closest("#menu-btn") && !e.target.closest('#nav-menu')) {
-        menuOpen();
-      }
-    };
 
     window.addEventListener("click", handleClickOutside);
 
@@ -60,37 +60,7 @@ const Header = () => {
             click ? "max-md:right-0" : "max-md:-right-full"
           }`}
         >
-          {/* <NavLink
-            to="/about"
-            className={`hover-link max-md:order-1 ${
-              click
-                ? "max-md:translate-x-0 delay-200"
-                : "max-md:translate-x-[200px]"
-            } duration-500 transition-transform`}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={`hover-link max-md:order-2 ${
-              click
-                ? "max-md:translate-x-0 delay-300"
-                : "max-md:translate-x-[200px]"
-            } transition-transform duration-500`}
-          >
-            Contact
-          </NavLink>
-          <NavLink
-            to="/planets"
-            className={`hover-link max-md:order-3 ${
-              click
-                ? "max-md:translate-x-0 delay-500"
-                : "max-md:translate-x-[200px]"
-            } duration-500 transition-transform`}
-          >
-            Planets
-          </NavLink> */}
-
+          
           {/* dark mode btn*/}
           <button
             onClick={toggleTheme}
