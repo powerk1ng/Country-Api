@@ -18,7 +18,6 @@ const Hero = () => {
 
   const showMoreCards = () => {
     setCardsLoading(true);
-
     setTimeout(() => {
       setLimit(prevLimit => prevLimit + 20);
       setCardsLoading(false);
@@ -26,7 +25,6 @@ const Hero = () => {
   };
 
   const url = "https://restcountries.com/v3.1/all";
-
   useEffect(() => {
     setTimeout(() => {
       axios
