@@ -18,6 +18,7 @@ const Header = () => {
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    menuOpen();
   };
 
   const menuOpen = () => {
