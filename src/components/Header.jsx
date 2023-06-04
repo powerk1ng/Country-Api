@@ -18,7 +18,9 @@ const Header = () => {
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    menuOpen();
+    if (window.innerWidth < 768) {
+      menuOpen();
+    }
   };
 
   const menuOpen = () => {
